@@ -15,6 +15,7 @@ spring:
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true
 management:
   endpoints:
     web:
@@ -24,3 +25,18 @@ eureka:
   client:
     service-url:
       defaultZone: ${EUREKA_SERVICE_URL}
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    configUrl: /v3/api-docs/swagger-config
+    url: /v3/api-docs
+    urls:
+      - name: api-email
+        url: /email-service/v3/api-docs
+      - name: api-user
+        url: /user-service/v3/api-docs
+      - name: api-flight
+        url: /flight-service/v3/api-docs
+      - name: api-post
+        url: /post-service/v3/api-docs
