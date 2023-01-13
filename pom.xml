@@ -15,63 +15,101 @@
 	<description>gateway</description>
 	<properties>
 		<java.version>11</java.version>
+		<spring-boot-starter.version>2.7.5</spring-boot-starter.version>							
+		<spring-boot-starter-webflux.version>2.7.5</spring-boot-starter-webflux.version>
+		<spring-boot-starter-test.version>2.7.5</spring-boot-starter-test.version>
+		<spring-boot-starter-security.version>2.7.5</spring-boot-starter-security.version>
+		<spring-boot-starter-actuator.version>2.7.5</spring-boot-starter-actuator.version>
+        <spring-boot-maven-plugin.version>2.7.5</spring-boot-maven-plugin.version>
+		<spring-cloud-starter-gateway.version>3.1.4</spring-cloud-starter-gateway.version>
+		<spring-cloud-starter-netflix-eureka-client.version>3.1.4</spring-cloud-starter-netflix-eureka-client.version>
+		<spring-security-core.version>6.0.1</spring-security-core.version>
+		<springdoc-openapi-webflux-ui.version>1.4.4</springdoc-openapi-webflux-ui.version>
+		<classgraph.version>4.8.139</classgraph.version>
+		<lombok.version>1.18.24</lombok.version>
+        <go-offline-maven-plugin.version>1.2.8</go-offline-maven-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<version>${spring-boot-starter.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring-boot-starter-test.version}</version>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
+			<version>${spring-boot-starter-webflux.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
-			<version>3.1.4</version>
+			<version>${spring-cloud-starter-gateway.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-			<version>3.1.4</version>
+			<version>${spring-cloud-starter-netflix-eureka-client.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
+			<version>${spring-security-core.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+			<version>${spring-boot-starter-security.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>${spring-boot-starter-actuator.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-webflux-ui</artifactId>
-			<version>1.4.4</version>
+			<version>${springdoc-openapi-webflux-ui.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>io.github.classgraph</groupId>
 			<artifactId>classgraph</artifactId>
-			<version>4.8.139</version>
+			<version>${classgraph.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring-boot-maven-plugin.version}</version>
+			</plugin>
+
+			<plugin>
+				<groupId>de.qaware.maven</groupId>
+				<artifactId>go-offline-maven-plugin</artifactId>
+				<version>${go-offline-maven-plugin.version}</version>
 			</plugin>
 		</plugins>
 	</build>
